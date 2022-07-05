@@ -1,0 +1,148 @@
+/* Start Global */
+:root{
+    --main-bck-clr: #3b989b;
+    --main-font-clr: #eee;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+.building{
+    background-color: #cdcaca;
+    color: #777;
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: default;
+}
+/* End Global */
+
+/* Start Component */
+/*  Button help you sroll to up */
+a.up{
+    position: fixed;
+    background-color: var(--main-bck-clr);
+    color: var(--main-font-clr);
+    bottom: 10px;
+    right: 10px;
+    padding: 3px;
+    border-radius: 3px;
+    font-size: 15px;
+}
+.level{
+    display: flex;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+}
+.level span{
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    margin-right: 5px;
+}
+.content ul li.very-easy span.a{
+    background-color: var(--main-bck-clr);
+}
+.content ul li.easy span.a,
+.content ul li.easy span.b{
+    background-color: var(--main-bck-clr);
+}
+/* End Component */
+
+/* Start Header */
+.header h1{
+    text-align: center;
+    margin: 0;
+    background-color: var(--main-bck-clr);
+    color: var(--main-font-clr);
+    padding: 20px 40px;
+    font-weight: normal;
+    font-size: 35px;
+}
+/* End Header */
+
+/* Start Content */
+.content ul{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+}
+.content ul li{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #414141;
+    padding: 20px 30px;
+    counter-increment: challenge;
+}
+.content ul li::before{
+    position: absolute;
+    content: counter(challenge);
+    width: 20px;
+    height: 20px;
+    background-color: var(--main-bck-clr);
+    color: var(--main-font-clr);
+    font-size: 20px;
+    padding: 5px 20px 5px 5px;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.content ul li::after{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 30px;
+    background-color: #ddd;
+    top: 0;
+    left: 35px;
+    transform: skewX(-10deg);
+}
+.content ul li .text{
+    font-size: 20px;
+    margin: 0;
+    color: var(--main-font-clr);
+}
+.content ul li img{
+    width: 100%;
+    height: 250px;
+    border: 1px solid #888;
+    margin: 20px 0;
+}
+.content ul li a{
+    background-color: var(--main-bck-clr);
+    color: var(--main-font-clr);
+    padding: 5px 10px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+/* End Content */
+
+/* Start Footer */
+.footer{
+    background-color: #414141;
+    color: #eee;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    letter-spacing: 1.1px;
+}
+.heart{
+    color: #3b989b;
+    font-size: 20px;
+}
+/* End Footer */
